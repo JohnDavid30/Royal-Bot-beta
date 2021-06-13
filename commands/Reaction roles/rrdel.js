@@ -2,9 +2,11 @@ const Discord = require("discord.js");
 const emojis = require("../../emojis.js");
 
 module.exports = {
-  name: "rradd",
+  name: "rrdel",
   args: true,
   category: "reaction",
+  usage:
+    "rrdel [channel mention | channelID] [messageID] [role mention | roleID] [emoji]",
   bot: [
     "VIEW_CHANNEL",
     "EMBED_LINKS",
@@ -20,9 +22,6 @@ module.exports = {
     "MANAGE_CHANNELS" ||
     "MANAGE_GUILD" ||
     "MANAGE_ROLES",
-
-  usage:
-    "rradd [channel mention | channelID] [messageID] [role mention | roleID] [emoji]",
   run: async (client, message, args) => {
     if (!args[0])
       return message.channel.send(
@@ -48,18 +47,48 @@ module.exports = {
     let emoji = await Discord.Util.parseEmoji(args[3]);
     if (!emoji && !emojis.includes(args[3]))
       return message.channel.send(":x: | **Specify a valid Emoji**");
-    if (emoji && !emojis.includes(args[3])) {
-      let checking = await client.emojis.cache.find(x => x.id === emoji.id);
-      if (!checking) return message.channel.send(`:x: | **Invalid Emoji**`);
-    }
+
     let pog = client.db.get(`reactions_${message.guild.id}_${msg.id}`);
-    if (pog && pog.find(x => x.emoji == args[3])) {
+
+    if (pog) {
+      let data = pog.find(x => x.emoji === args[3]);
       let embed = new Discord.MessageEmbed();
       embed.setAuthor(message.guild.name, message.guild.iconURL());
       embed.setTitle("Error");
-      embed.setDescription(
-        `:x: | **The emoji is already being used in The message for reaction Roles!**`
+      embed.setDescription(`:x: | **Reaction Roles not Found!**`);
+      embed.setFooter(
+        message.author.tag + " | made by glitch.com",
+        message.author.displayAvatarURL({ dynamic: true })
       );
+      embed.setTimestamp();
+      embed.setThumbnail(message.author.displayAvatarURL({ dynamic: true }));
+      if (!data)
+        return message.channel.send({
+          embed: embed
+        });
+      let index = pog.indexOf(data);
+      delete pog[index];
+      var filter = pog.filter(x => {
+        return x !== null && x;
+      });
+      client.db.set(`reactions_${message.guild.id}_${msg.id}`, filter);
+      let embed2 = new Discord.MessageEmbed();
+      embed2.setAuthor(message.author.tag, message.author.displayAvatarURL());
+      embed2.setDescription(`**The Reaction Role has been deleted!** `);
+      embed2.setFooter(
+        message.guild.name + " | made by glitch.com",
+        message.guild.iconURL()
+      );
+      embed2.setColor("GREEN");
+      embed2.setTimestamp();
+      return message.channel.send({
+        embed: embed2
+      });
+    } else {
+      let embed = new Discord.MessageEmbed();
+      embed.setAuthor(message.guild.name, message.guild.iconURL());
+      embed.setTitle("Error");
+      embed.setDescription(`:x: | **Reaction Roles not Found!**`);
       embed.setFooter(
         message.author.tag + " | made by glitch.com",
         message.author.displayAvatarURL({ dynamic: true })
@@ -70,25 +99,5 @@ module.exports = {
         embed: embed
       });
     }
-    await msg.react(args[3]);
-    client.db.push(`reactions_${message.guild.id}_${msg.id}`, {
-      emoji: args[3],
-      roleId: role.id
-    });
-
-    let embed = new Discord.MessageEmbed();
-    embed.setAuthor(message.guild.name, message.guild.iconURL());
-    embed.setTitle("Success");
-    embed.setThumbnail(message.guild.iconURL());
-    embed.setDescription(`**The Reaction Role has been Set up**`);
-    embed.setFooter(
-      message.author.tag + " | made by glitch.com",
-      message.author.displayAvatarURL({ dynamic: true })
-    );
-    embed.setColor("RANDOM");
-    embed.setTimestamp();
-    message.channel.send({
-      embed: embed
-    });
   }
 };
