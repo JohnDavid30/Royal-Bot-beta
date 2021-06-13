@@ -18,7 +18,4 @@ module.exports = {
     fun: "<:fun:816832717832454164>"
   }
 };
-//${client.emotes.success/off/error}
-//if you want emojis to be better you can join our server
-//#1 https://discord.gg/MKwyk4qdeb
-//#2 https://discord.gg/fCYryTEbJ5
+
