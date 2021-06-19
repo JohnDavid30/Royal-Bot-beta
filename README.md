@@ -1,5 +1,5 @@
 ### Information
-
+vote me - https://infinitybotlist.com/bots/853155550127456267/vote
 - This command has additional features
 
 | Name | Description | Usage It works |
@@ -13,6 +13,6 @@
 <a href='https://infinitybotlist.com/bots/853155550127456267' title='widget'> <img src='https://infinitybotlist.com/bots/853155550127456267/widget?size=small'></img></a>
 
 
-<a href='https://infinitybotlist.com/bots/853155550127456267' title='widget'> <img src='https://infinitybotlist.com/bots/853155550127456267/widget?size=small'></img></a>
+
 
 
