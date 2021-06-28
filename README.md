@@ -1,5 +1,5 @@
 ### Information
-vote me - https://infinitybotlist.com/bots/853155550127456267/vote
+vote me - https://top.gg/bot/787260574551375903
 - This command has additional features
 
 | Name | Description | Usage It works |
@@ -10,7 +10,9 @@ vote me - https://infinitybotlist.com/bots/853155550127456267/vote
 | **cooldown** | This gives permission to cooldown the command | `cooldown: 3` |  
 | **guildOnly** | this can only be on the server not on dm | `guildOnly: false/true` | 
 
-<a href='https://infinitybotlist.com/bots/853155550127456267' title='widget'> <img src='https://infinitybotlist.com/bots/853155550127456267/widget?size=small'></img></a>
+<a href="https://top.gg/bot/787260574551375903">
+  <img src="https://top.gg/api/widget/787260574551375903.svg" alt="Royal Bot" />
+  </a>
 
 
 
