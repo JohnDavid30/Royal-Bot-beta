@@ -126,6 +126,7 @@ TYPE: r!help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMM
         .addField(`🤐 Anti Swear`, `\``r!help anti-swear`\``, true)
         .addField(`🤣 Fun`, `\``r!help fun`\``,  true) 
         .addField(`🎮 Games`, `\``r!help games`\``, true) 
+        .setFooter(`Made By JohnDavid#0009`)
         .setTimestamp()
     );
   }
