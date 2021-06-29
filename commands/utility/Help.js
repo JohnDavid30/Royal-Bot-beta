@@ -85,19 +85,19 @@ module.exports = {
       new Discord.MessageEmbed()
         .setColor("GREEN")
         .setTitle("The All Commands")
-        .setDescription( PREFIX: r!
+        .setDescription(`PREFIX: r!
 
-❓ |     WHAT IS OMEGA ALETON?
+:question: |     WHAT IS OMEGA ALETON?
 
 ROYAL BOT  BETA IS AN EPIC BOT, WHICH IS MORE THAN A BASIC BOT! IT HAS ALL THE COMMANDS (INCLUDING: MODERATION, FUN, GAMES, UTLS, etcur.) COMPILED IN IT SO THAT YOU CAN USE ABLETON FOR EVERY TASKS YOU WANT IT TO PERFORM!
 
 
-🔗 |    IMPORTANT LINKS:
+:link: |    IMPORTANT LINKS:
 [INVITE](https://discordapp.com/oauth2/authorize?client_id=787260574551375903&scope=bot&permissions=2146958847) | [SUPPORT SERVER](${support})
 
 🔨 | COMMANDS:
 
-TYPE: r!help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMMAND CATEGORY!)
+TYPE: r!help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMMAND CATEGORY!`)
         .addField(
           `🛠 Moderation`,
           `\`moderation\``,
@@ -105,28 +105,30 @@ TYPE: r!help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMM
         )
         .addField(
           `🔨 Settings`,
-          `\`settings\``,
+          `\settings\``,
           true
         )
-        .addField(`👑 Admin`, `\``r!help admin`\``, true)
-        .addField(`🎟 Ticket`, `\``r!help ticket`\``, true)
+        .addField(`👑 Admin`, `\`r!help admin\``, true)
+        .addField(`🎟 Ticket`, `\`r!help ticket\``, true)
         .addField(
           `🗞 Utility`,
-          `\``r!help utility`\``,
+          `\`r!help utility\``,
           true
         )
-        .addField(`🔍 Search`, `\``r!help search`\``, true)
-        .addField(`📝 Misc`, `\``r!help misc`\``, true)
+        .addField(`🔍 Search`, `\`r!help search\``, true)
+        .addField(`📝 Misc`, `\`r!help misc\``, true)
         .addField(`🎶 Music`, `\`music\``, true)
         .addField(`
         ✅ Reaction Roles`,
-                  `\``r!help reaction`\``,
+                  `\`r!help reaction\``,
                   true
                  )
-        .addField(`🤐 Anti Swear`, `\``r!help anti-swear`\``, true)
-        .addField(`🤣 Fun`, `\``r!help fun`\``,  true) 
-        .addField(`🎮 Games`, `\``r!help games`\``, true) 
-        .setFooter(`Made By JohnDavid#0009`)
+        .addField(`🤐 Anti Swear`, `\`r!help anti-swear\``, true)
+        .addField(`🤣 Fun`, `\`r!help fun\``,  true) 
+        .addField(`🎮 Games`, `\`r!help games\``, true) 
+        .setImage(
+          "https://www4.flamingtext.com/Tools/download/coollogo_com.png?url=https://ov10-engine.flamingtext.com/netfu/tmp28002/coollogo_com-203772237.png&_loc=download"
+        )
         .setTimestamp()
     );
   }
