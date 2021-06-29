@@ -84,28 +84,19 @@ module.exports = {
     return message.channel.send(
       new Discord.MessageEmbed()
         .setColor("GREEN")
-        .setTitle("The All Commands")
+        .setTitle("Royal Bot beta Commands List")
         .setDescription(`PREFIX: r!
-
-:question: |     WHAT IS OMEGA ALETON?
-
-ROYAL BOT  BETA IS AN EPIC BOT, WHICH IS MORE THAN A BASIC BOT! IT HAS ALL THE COMMANDS (INCLUDING: MODERATION, FUN, GAMES, UTLS, etcur.) COMPILED IN IT SO THAT YOU CAN USE ABLETON FOR EVERY TASKS YOU WANT IT TO PERFORM!
-
-
-:link: |    IMPORTANT LINKS:
-[INVITE](https://discordapp.com/oauth2/authorize?client_id=787260574551375903&scope=bot&permissions=2146958847) | [SUPPORT SERVER](${support})
-
 🔨 | COMMANDS:
 
 TYPE: r!help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMMAND CATEGORY!`)
         .addField(
           `🛠 Moderation`,
-          `\`moderation\``,
+          `\`r!help moderation\``,
           true
         )
         .addField(
           `🔨 Settings`,
-          `\settings\``,
+          `\`r!help settings\``,
           true
         )
         .addField(`👑 Admin`, `\`r!help admin\``, true)
@@ -117,7 +108,7 @@ TYPE: r!help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMM
         )
         .addField(`🔍 Search`, `\`r!help search\``, true)
         .addField(`📝 Misc`, `\`r!help misc\``, true)
-        .addField(`🎶 Music`, `\`music\``, true)
+        .addField(`🎶 Music`, `\`r!help music\``, true)
         .addField(`
         ✅ Reaction Roles`,
                   `\`r!help reaction\``,
