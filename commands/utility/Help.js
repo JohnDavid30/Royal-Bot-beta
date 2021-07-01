@@ -85,38 +85,38 @@ module.exports = {
       new Discord.MessageEmbed()
         .setColor("GREEN")
         .setTitle("Royal Bot beta Commands List")
-        .setDescription(`PREFIX: r!
+        .setDescription(`PREFIX: ${Default_Prefix}
 🔨 | COMMANDS:
 
-TYPE: r!help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMMAND CATEGORY!`)
+TYPE: ${Default_Prefix}help <command category name> TO GET EXTENDED INFORMATION ABOUT THAT COMMAND CATEGORY!`)
         .addField(
           `🛠 Moderation`,
-          `\`r!help moderation\``,
+          `\`${Default_Prefix}help moderation\``,
           true
         )
         .addField(
           `🔨 Settings`,
-          `\`r!help settings\``,
+          `\`${Default_Prefix}help settings\``,
           true
         )
-        .addField(`👑 Admin`, `\`r!help admin\``, true)
-        .addField(`🎟 Ticket`, `\`r!help ticket\``, true)
+        .addField(`👑 Admin`, `\`${Default_Prefix}help admin\``, true)
+        .addField(`🎟 Ticket`, `\`${Default_Prefix}help ticket\``, true)
         .addField(
           `🗞 Utility`,
-          `\`r!help utility\``,
+          `\`${Default_Prefix}help utility\``,
           true
         )
-        .addField(`🔍 Search`, `\`r!help search\``, true)
-        .addField(`📝 Misc`, `\`r!help misc\``, true)
-        .addField(`🎶 Music`, `\`r!help music\``, true)
+        .addField(`🔍 Search`, `\`${Default_Prefix}help search\``, true)
+        .addField(`📝 Misc`, `\`${Default_Prefix}help misc\``, true)
+        .addField(`🎶 Music`, `\`${Default_Prefix}help music\``, true)
         .addField(`
         ✅ Reaction Roles`,
-                  `\`r!help reaction\``,
+                  `\`${Default_Prefix}help reaction\``,
                   true
                  )
-        .addField(`🤐 Anti Swear`, `\`r!help anti-swear\``, true)
-        .addField(`🤣 Fun`, `\`r!help fun\``,  true) 
-        .addField(`🎮 Games`, `\`r!help games\``, true) 
+        .addField(`🤐 Anti Swear`, `\`${Default_Prefix}help anti-swear\``, true)
+        .addField(`🤣 Fun`, `\`${Default_Prefix}help fun\``,  true) 
+        .addField(`🎮 Games`, `\`${Default_Prefix}help games\``, true) 
         .setImage(
           "https://www4.flamingtext.com/Tools/download/coollogo_com.png?url=https://ov10-engine.flamingtext.com/netfu/tmp28002/coollogo_com-203772237.png&_loc=download"
         )
