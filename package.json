@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": " F U C K#0306",
+  "author": "JohnDavid#0009",
   "dependencies": {
     "express": "^4.17.1",
     "fs": "^0.0.2",
